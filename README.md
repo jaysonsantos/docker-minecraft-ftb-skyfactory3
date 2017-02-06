@@ -1,4 +1,4 @@
-docker-minecraft-ftb-direwolf20-1.10
+docker-minecraft-ftb-skyfactory3
 ===============
 
 Dockerfile for Minecraft Infinity Server
@@ -7,7 +7,7 @@ This docker image provides a Minecraft Server, based on Feed The Beast Infinity.
 
 To simply use the latest stable version, run:
 
-    docker run -d -p 25565:25565 jaysonsantos/minecraft-ftb-direwolf20-1.10
+    docker run -d -p 25565:25565 jaysonsantos/minecraft-ftb-skyfactory3
 
 where the default server port, 25565, will be exposed on your host machine. If you want to serve up multiple Minecraft servers or just use an alternate port, change the host-side port mapping such as:
 
@@ -17,7 +17,7 @@ will service port 25566.
 
 Speaking of multiple servers, it's handy to give your containers explicit names using `--name`, such as
 
-    docker run -d -p 25565:25565 --name minecraft jaysonsantos/minecraft-ftb-direwolf20-1.10
+    docker run -d -p 25565:25565 --name minecraft jaysonsantos/minecraft-ftb-skyfactory3
 
 With that you can easily view the logs, stop, or re-start the container:
 
@@ -33,7 +33,7 @@ With that you can easily view the logs, stop, or re-start the container:
 
 In order to persist the Minecraft data, which you *probably want to do for a real server setup*, use the `-v` argument to map a directory of the host to ``/data``:
 
-    docker run -d -v /path/on/host:/data -p 25565:25565 jaysonsantos/minecraft-ftb-direwolf20-1.10
+    docker run -d -v /path/on/host:/data -p 25565:25565 jaysonsantos/minecraft-ftb-skyfactory3
 
 When attached in this way you can stop the server, edit the configuration under your attached ``/path/on/host`` and start the server again with `docker start CONTAINERID` to pick up the new configuration.
 
